@@ -2108,7 +2108,7 @@
 			<key>Columns</key>
 			<integer>68</integer>
 			<key>Command</key>
-			<string>login -fp malcala</string>
+			<string>/bin/bash</string>
 			<key>Cursor Color</key>
 			<dict>
 				<key>Blue Component</key>
@@ -3250,7 +3250,7 @@
 											<key>Columns</key>
 											<integer>68</integer>
 											<key>Command</key>
-											<string>login -fp malcala</string>
+											<string>/bin/bash</string>
 											<key>Cursor Color</key>
 											<dict>
 												<key>Blue Component</key>
@@ -3767,7 +3767,7 @@
 													<key>Columns</key>
 													<integer>68</integer>
 													<key>Command</key>
-													<string>login -fp malcala</string>
+													<string>/bin/bash</string>
 													<key>Cursor Color</key>
 													<dict>
 														<key>Blue Component</key>
@@ -4281,7 +4281,7 @@
 													<key>Columns</key>
 													<integer>68</integer>
 													<key>Command</key>
-													<string>login -fp malcala</string>
+													<string>/bin/bash</string>
 													<key>Cursor Color</key>
 													<dict>
 														<key>Blue Component</key>
