@@ -10,6 +10,7 @@ brew install ruby-build
 brew install rbenv-gemset
 rbenv install 2.2.3
 brew cask install iterm2
+brew cask install atom
 
 # vagrant setup commands
 brew cask install virtualbox
