@@ -9,6 +9,7 @@ brew install mysql
 brew install rbenv
 brew install ruby-build
 brew install rbenv-gemset
+brew install the_silver_seacher
 rbenv install 2.2.3
 brew cask install iterm2
 brew cask install atom
