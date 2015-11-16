@@ -4,7 +4,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 brew tap caskroom/cask
 brew install brew-cask
 brew install git
-brev install vim
+brew install vim
 brew install mysql
 brew install rbenv
 brew install ruby-build
