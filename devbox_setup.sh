@@ -13,6 +13,7 @@ brew install the_silver_seacher
 rbenv install 2.2.3
 brew cask install iterm2
 brew cask install atom
+brew install python3
 
 # vim setup
 git clone https://github.com/maxArturo/vimrc.git ~/.vim_runtime
@@ -23,3 +24,6 @@ brew cask install virtualbox
 brew cask install vagrant
 brew cask install vagrant-manager
 vagrant plugin install vagrant-vbguest
+
+# python setup
+pip3 install virtualenv
