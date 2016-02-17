@@ -10,6 +10,8 @@ brew install rbenv
 brew install ruby-build
 brew install rbenv-gemset
 brew install the_silver_seacher
+brew install docker
+brew install docker-machine
 rbenv install 2.2.3
 brew cask install iterm2
 brew cask install atom
@@ -27,3 +29,5 @@ vagrant plugin install vagrant-vbguest
 
 # python setup
 pip3 install virtualenv
+
+source ./aliases

@@ -4,6 +4,7 @@ set -o vi
 export PS1='┌── [ \w $(__git_ps1 "(%s)") ]\n└─» '
 # sources
 source ~/.git-prompt.sh
+source ~/.aliases
 
 # aliases
 alias wifioff="networksetup -setairportpower en0 off"

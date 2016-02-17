@@ -1,0 +1,30 @@
+## start docker machine on the 'default' virtualbox vm
+
+docker-init() {
+  if [ -z "$@" ]
+    then
+      name="default"
+    else
+      name=$@
+  fi
+  docker-machine start $name && eval "$(docker-machine env $name)"
+}
+
+## Get into a container
+into () {
+  docker exec -ti $@ sh
+}
+
+## Cleans docker images / containers
+## to prevent them from eating ton
+## of space
+docker-clean() {
+  echo 'Removing exited containers'
+  docker rm $(docker ps -f=status=exited -a -q)
+  echo 'Removing dangling images'
+  docker rmi `docker images -qf 'dangling=true'`
+}
+
+push () {
+    git push --set-upstream origin `git symbolic-ref --short HEAD`
+}
