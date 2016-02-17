@@ -3,11 +3,12 @@
 docker-init() {
   if [ -z "$@" ]
     then
-      name="default"
+      name=default
     else
       name=$@
   fi
-  docker-machine start $name && eval "$(docker-machine env $name)"
+  docker-machine start $name 
+  eval "$(docker-machine env $name)"
 }
 
 ## Get into a container
