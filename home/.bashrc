@@ -27,3 +27,9 @@ source ~/git-completion.bash
 alias wifioff="networksetup -setairportpower en0 off"
 alias wifion="networksetup -setairportpower en0 on"
 alias wifireboot="wifioff && wifion"
+
+# git aliases
+git config --global alias.co checkout
+git config --global alias.br branch
+git config --global alias.c commit
+git config --global alias.s status
