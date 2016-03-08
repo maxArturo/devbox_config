@@ -30,4 +30,5 @@ vagrant plugin install vagrant-vbguest
 # python setup
 pip3 install virtualenv
 
+cp -r home/ ~/
 source ./aliases
