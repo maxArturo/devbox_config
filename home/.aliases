@@ -29,3 +29,7 @@ docker-clean() {
 push () {
     git push --set-upstream origin `git symbolic-ref --short HEAD`
 }
+
+gdiff () {
+    git difftool $1 -y -x "colordiff -y -W $COLUMNS" | less -R
+}
