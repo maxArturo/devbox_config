@@ -1,3 +1,7 @@
+###########################
+# Docker section
+###########################
+
 ## start docker machine on the 'default' virtualbox vm
 
 docker-init() {
@@ -26,9 +30,22 @@ docker-clean() {
   docker rmi `docker images -qf 'dangling=true'`
 }
 
+## Shorthand for interactive Erlang REPL
+erldocker() {
+  docker run -it --rm erlang
+}
+
+###########################
+# Misc section
+###########################
+
+## shortand git push
+
 push () {
     git push --set-upstream origin `git symbolic-ref --short HEAD`
 }
+
+## provides a somewhat sane side-by-side git diff in the terminal
 
 gdiff () {
     git difftool $1 -y -x "colordiff -y -W $COLUMNS" | less -R
