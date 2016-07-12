@@ -15,6 +15,8 @@ brew install docker-machine
 rbenv install 2.2.3
 brew cask install iterm2
 brew cask install atom
+brew install colordiff
+brew install cmus
 brew install python3
 
 # vim setup
@@ -30,4 +32,5 @@ vagrant plugin install vagrant-vbguest
 # python setup
 pip3 install virtualenv
 
+cp -r home/ ~/
 source ./aliases
