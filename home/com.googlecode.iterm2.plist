@@ -5756,11 +5756,11 @@
 			<key>Name</key>
 			<string>Nichol</string>
 			<key>Non Ascii Font</key>
-			<string>Monaco 12</string>
+			<string>Source Code Medium 12</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>Inconsolata 14</string>
+			<string>Source Code Medium 14</string>
 			<key>Option Key Sends</key>
 			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
