@@ -33,3 +33,10 @@ git config --global alias.co checkout
 git config --global alias.br branch
 git config --global alias.c commit
 git config --global alias.s status
+
+# go home directory
+export GOPATH=$HOME/.go
+
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:/usr/local/opt/go/libexec/bin
+
