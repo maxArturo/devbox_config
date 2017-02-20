@@ -16,7 +16,12 @@ export PATH="$HOME/bin:$PATH"
 set -o vi
 
 # set fancy PS1 prompt
-export PS1='┌── [ \w $(__git_ps1 "(%s)") ]\n└─» '
+
+print-line() {
+  printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' -
+}
+
+export PS1='$(print-line)\n┌── [ \w $(__git_ps1 "(%s)") ]\n└─» '
 
 # sources
 source ~/.git-prompt.sh
