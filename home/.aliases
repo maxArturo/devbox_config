@@ -30,6 +30,11 @@ docker-clean() {
   docker rmi `docker images -qf 'dangling=true'`
 }
 
+## kill all containers
+docker-killall() {
+  docker ps | awk '{print $1}' | tail -n +2 | xargs docker kill
+}
+
 ## Shorthand for interactive Erlang REPL
 erldocker() {
   docker run -it --rm erlang
