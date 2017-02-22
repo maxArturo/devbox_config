@@ -11,11 +11,17 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-#pretty up completion
+## Base ZSH setup##
 zstyle ':completion:*:descriptions' format '%U%B%d%b%u'
 zstyle ':completion:*:warnings' format '%BSorry, no matches for: %d%b'
 
 setopt correctall
+
+autoload -U promptinit
+promptinit
+
+# antigen
+source /usr/local/share/antigen/antigen.zsh
 
 # Brew
 export PATH="/usr/local/bin:$PATH"

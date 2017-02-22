@@ -7,6 +7,7 @@ brew install brew-cask \
   git \
   vim \
   rbenv \
+  antigen \
   ruby-build \
   the_silver_searcher \
   colordiff \
@@ -14,6 +15,7 @@ brew install brew-cask \
   python \
   virtualbox \
   vagrant-manager \
+  httpie \
   vagrant
 
 brew cask install font-source-code-pro \
