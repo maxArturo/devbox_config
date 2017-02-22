@@ -2,35 +2,33 @@ xcode-select --install #manual
 
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew tap caskroom/cask
-brew install brew-cask
-brew install git
-brew install vim
-brew install mysql
-brew install rbenv
-brew install ruby-build
-brew install rbenv-gemset
-brew install the_silver_seacher
-brew install docker
-brew install docker-machine
-rbenv install 2.2.3
-brew cask install iterm2
-brew cask install atom
-brew install colordiff
-brew install cmus
-brew install python3
+brew install brew-cask \
+  git \
+  vim \
+  rbenv \
+  ruby-build \
+  the_silver_searcher \
+  colordiff \
+  cmus \
+  python \
+  virtualbox \
+  vagrant-manager \
+  vagrant
+
+brew cask install font-source-code-pro \
+  iterm2
+
+rbenv install 2.4.0
 
 # vim setup
 git clone https://github.com/maxArturo/vimrc.git ~/.vim_runtime
 sh ~/.vim_runtime/install_awesome_vimrc.sh
 
 # vagrant setup commands
-brew cask install virtualbox
-brew cask install vagrant
-brew cask install vagrant-manager
 vagrant plugin install vagrant-vbguest
 
 # python setup
-pip3 install virtualenv
 
 cp -r home/ ~/
 source ./aliases
+
