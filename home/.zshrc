@@ -2,10 +2,8 @@
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
-bindkey -v
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/Users/rtuser/.zshrc'
 
 autoload -Uz compinit
 compinit
@@ -17,22 +15,21 @@ zstyle ':completion:*:warnings' format '%BSorry, no matches for: %d%b'
 
 setopt correctall
 
-autoload -U promptinit
-promptinit
 
-#
-# Antigen section
-#
+################
+# Vi section 
+################
 
-source /usr/local/share/antigen/antigen.zsh
+bindkey -v
+export KEYTIMEOUT=1
 
-antigen use oh-my-zsh
+################
+# Prompt
+################
 
-antigen bundle git
-antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle command-not-found
+PROMPT='%F{red}%n%f@%F{blue}%@%f %F{yellow}%~%f %# '
 
-antigen theme af-magic
+source ./git_prompt.zsh
 
 # Brew
 export PATH="/usr/local/bin:$PATH"
@@ -54,6 +51,5 @@ export PATH=$PATH:/usr/local/opt/go/libexec/bin
 
 # RT base directory
 export RT_DIR=${HOME}/Developer/rt
-
-source ~/.rtx-rc
+# source ~/.rtx-rc
 

@@ -30,8 +30,6 @@ sh ~/.vim_runtime/install_awesome_vimrc.sh
 # vagrant setup commands
 vagrant plugin install vagrant-vbguest
 
-# python setup
-
-cp -r home/ ~/
-source ./aliases
+ln -s home/git_prompt.zsh ~
+ln -s home/zshrc ~
 
