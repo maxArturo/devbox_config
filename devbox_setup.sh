@@ -7,7 +7,6 @@ brew install brew-cask \
   git \
   vim \
   rbenv \
-  antigen \
   ruby-build \
   the_silver_searcher \
   colordiff \
