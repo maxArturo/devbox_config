@@ -20,8 +20,19 @@ setopt correctall
 autoload -U promptinit
 promptinit
 
-# antigen
+#
+# Antigen section
+#
+
 source /usr/local/share/antigen/antigen.zsh
+
+antigen use oh-my-zsh
+
+antigen bundle git
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle command-not-found
+
+antigen theme af-magic
 
 # Brew
 export PATH="/usr/local/bin:$PATH"
