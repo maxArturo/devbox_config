@@ -46,6 +46,11 @@ docker-killall() {
   docker ps | awk '{print $1}' | tail -n +2 | xargs docker kill
 }
 
+## kill all containers
+docker-rmiall() {
+  docker images | awk '{print $3}' | tail -n +2 | xargs docker kill
+}
+
 ## Shorthand for interactive Erlang REPL
 erldocker() {
   docker run -it --rm erlang

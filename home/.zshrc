@@ -50,5 +50,5 @@ export PATH=$PATH:/usr/local/opt/go/libexec/bin
 
 # RT base directory
 export RT_DIR=${HOME}/Developer/rt
-# source ~/.rtx-rc
+source ~/.rtx-rc
 
