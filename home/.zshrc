@@ -26,7 +26,7 @@ export KEYTIMEOUT=1
 # Prompt
 ################
 
-PROMPT='%F{red}%n%f@%F{blue}%@%f %F{yellow}%~%f %# '
+PROMPT='%F{red}%n%f%F{blue}%@%f%F{yellow} [%~]%f %# '
 
 source ./git_prompt.zsh
 
@@ -39,6 +39,10 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 # Local bin folder
 export PATH="$HOME/bin:$PATH"
 
+# NVM
+export NVM_DIR=~/.nvm
+. $(brew --prefix nvm)/nvm.sh
+
 # Handy aliases
 source ~/.aliases
 
@@ -50,5 +54,5 @@ export PATH=$PATH:/usr/local/opt/go/libexec/bin
 
 # RT base directory
 export RT_DIR=${HOME}/Developer/rt
-source ~/.rtx-rc
 
+source .rtx-rc
