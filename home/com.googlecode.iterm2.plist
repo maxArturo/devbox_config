@@ -5476,13 +5476,13 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>1280 105 445 77 0 0 1920 1057 </string>
+	<string>1127 209 445 77 0 0 1680 1027 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 139 606 456 0 0 1680 1027 </string>
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>507 491 796 473 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 590 710 467 0 0 1920 1057 </string>
+	<string>0 0 1680 1050 0 0 1680 1027 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -6289,7 +6289,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>SourceCodePro-Regular 11</string>
+			<string>SourceCodePro-Regular 14</string>
 			<key>Only The Default BG Color Uses Transparency</key>
 			<true/>
 			<key>Option Key Sends</key>
@@ -6824,7 +6824,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>4DF4CABC-1995-4535-B9D0-0E474CF4AF64</string>
 	<key>NoSyncLastTipTime</key>
-	<real>509484629.532251</real>
+	<real>509845637.62858897</real>
 	<key>NoSyncPermissionToShowTip</key>
 	<true/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
@@ -6838,6 +6838,10 @@
 		<string>0003</string>
 		<string>0004</string>
 		<string>0005</string>
+		<string>0006</string>
+		<string>0007</string>
+		<string>0008</string>
+		<string>0009</string>
 	</array>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
@@ -6905,7 +6909,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-02-22T20:13:35Z</date>
+	<date>2017-02-27T15:28:18Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
