@@ -28,7 +28,7 @@ export KEYTIMEOUT=1
 
 PROMPT='%F{red}%n%f%F{blue}%@%f%F{yellow} [%~]%f %# '
 
-source ./git_prompt.zsh
+source ~/.git_prompt.zsh
 
 # Brew
 export PATH="/usr/local/bin:$PATH"
@@ -55,4 +55,13 @@ export PATH=$PATH:/usr/local/opt/go/libexec/bin
 # RT base directory
 export RT_DIR=${HOME}/Developer/rt
 
-source .rtx-rc
+# RT toolbelt
+export PATH=$PATH:$HOME/.rt/bin
+
+source ~/.rtx-rc
+
+# funky ansible stuff for aws deployments
+export AWS_REGION="us-east-1"
+export ANSIBLE_CONFIG=${RT_DIR}/rtx/playbooks/ansible.cfg
+export ANSIBLE_VAULT_PASSWORD_FILE=${HOME}/.rt/libexec/rt-ansible-vault
+
