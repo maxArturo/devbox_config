@@ -2,7 +2,6 @@
 alias wifioff="networksetup -setairportpower en0 off"
 alias wifion="networksetup -setairportpower en0 on"
 alias wifireboot="wifioff && wifion"
-alias vim="nvim"
 
 # git aliases
 git config --global alias.co checkout
