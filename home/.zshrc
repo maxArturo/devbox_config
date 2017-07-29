@@ -52,16 +52,3 @@ export GOPATH=$HOME/.go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
 
-# RT base directory
-export RT_DIR=${HOME}/Developer/rt
-
-# RT toolbelt
-export PATH=$PATH:$HOME/.rt/bin
-
-source ~/.rtx-rc
-
-# funky ansible stuff for aws deployments
-export AWS_REGION="us-east-1"
-export ANSIBLE_CONFIG=${RT_DIR}/rtx/playbooks/ansible.cfg
-export ANSIBLE_VAULT_PASSWORD_FILE=${HOME}/.rt/libexec/rt-ansible-vault
-
