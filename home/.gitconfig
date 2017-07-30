@@ -1,0 +1,12 @@
+[alias]
+	co = checkout
+	br = branch
+	c = commit
+	s = status
+[user]
+	name = Max Alcala
+	email = maxarturo@gmail.com
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore
+

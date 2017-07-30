@@ -27,4 +27,6 @@ sh ~/.vim_runtime/install_awesome_vimrc.sh
 ln -s ~/devbox_config/home/.git_prompt.zsh ~/
 ln -s ~/devbox_config/home/.aliases ~/
 ln -s ~/devbox_config/home/.zshrc ~/
+ln -s ~/devbox_config/home/.gitconfig ~/
+ln -s ~/devbox_config/home/.gitignore ~/
 
