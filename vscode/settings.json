@@ -1,0 +1,7 @@
+{
+    "workbench.colorTheme": "Default Light+",
+    "vim.disableAnnoyingNeovimMessage": true,
+    "window.zoomLevel": 0,
+    "files.autoSave": "onFocusChange",
+    "editor.minimap.enabled": false
+}

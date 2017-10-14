@@ -10,7 +10,8 @@ brew install \
   nvm \
   colordiff \
   cmus \
-  ncdu
+  ncdu \
+  tig
 
 brew cask install font-source-code-pro \
   iterm2    \
