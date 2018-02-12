@@ -66,6 +66,10 @@ push () {
     git push --set-upstream origin `git symbolic-ref --short HEAD`
 }
 
+glog () {
+    git log --oneline --graph
+}
+
 ## provides a somewhat sane side-by-side git diff in the terminal
 
 gdiff () {
