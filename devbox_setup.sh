@@ -11,7 +11,8 @@ brew install \
   colordiff \
   cmus \
   ncdu \
-  tig
+  tig \
+  zsh-syntax-highlighting
 
 brew cask install font-source-code-pro \
   iterm2    \
