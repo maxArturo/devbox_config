@@ -12,6 +12,7 @@ brew install \
   cmus \
   ncdu \
   tig \
+  autojump \
   zsh-syntax-highlighting
 
 brew cask install font-source-code-pro \
