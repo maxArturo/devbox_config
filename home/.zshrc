@@ -52,6 +52,9 @@ export GOPATH=$HOME/.go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
 
+# TeX Paths
+export PATH=$PATH:/Library/TeX/texbin
+
 # gcp goodies
 source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
 source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
@@ -64,4 +67,5 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # autojumping (https://github.com/wting/autojump), to uninstall: clone git dir and run ./uninstall.py
 [[ -s /Users/malcalasai001/.autojump/etc/profile.d/autojump.sh ]] && source /Users/malcalasai001/.autojump/etc/profile.d/autojump.sh
+
 
