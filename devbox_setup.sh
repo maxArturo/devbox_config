@@ -18,6 +18,8 @@ brew install \
   lsd
 
 brew cask install font-source-code-pro \
+  font-hack-nerd-font \
+  font
   iterm2    \
   spotify   \
   keepassx  \

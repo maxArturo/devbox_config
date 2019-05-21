@@ -79,3 +79,6 @@ glog () {
     git log --graph --oneline
 }
 
+## lsd is an enriched version of ls
+alias ls='lsd'
+
