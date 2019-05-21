@@ -65,7 +65,20 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 # add syntax for zsh prompt
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# Setup fzf for zsh
+# ---------
+if [[ ! "$PATH" == */usr/local/opt/fzf/bin* ]]; then
+  export PATH="$PATH:/usr/local/opt/fzf/bin"
+fi
+
+# Auto-completion
+# ---------------
+[[ $- == *i* ]] && source "/usr/local/opt/fzf/shell/completion.zsh" 2> /dev/null
+
+# Key bindings
+# ------------
+source "/usr/local/opt/fzf/shell/key-bindings.zsh"
+
 # autojumping (https://github.com/wting/autojump), to uninstall: clone git dir and run ./uninstall.py
 [[ -s /Users/malcalasai001/.autojump/etc/profile.d/autojump.sh ]] && source /Users/malcalasai001/.autojump/etc/profile.d/autojump.sh
-
 

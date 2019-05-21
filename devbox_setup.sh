@@ -13,7 +13,9 @@ brew install \
   ncdu \
   tig \
   autojump \
-  zsh-syntax-highlighting
+  zsh-syntax-highlighting \
+  fzf \
+  lsd
 
 brew cask install font-source-code-pro \
   iterm2    \
