@@ -1,6 +1,6 @@
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew tap caskroom/cask
-brew tap caskroom/fonts    
+brew tap caskroom/fonts
 brew install \
   git \
   vim \
@@ -15,7 +15,8 @@ brew install \
   autojump \
   zsh-syntax-highlighting \
   fzf \
-  lsd
+  lsd \
+  global --with-pygments --with-ctags
 
 brew cask install font-source-code-pro \
   font-hack-nerd-font \
