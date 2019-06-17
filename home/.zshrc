@@ -16,7 +16,7 @@ zstyle ':completion:*:warnings' format '%BSorry, no matches for: %d%b'
 setopt correctall
 
 ################
-# Vi section 
+# Vi section
 ################
 
 bindkey -v
