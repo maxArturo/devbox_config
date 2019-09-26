@@ -307,7 +307,7 @@ executes.
  This function is mostly useful for variables that need to be set
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
-  )
+)
 
 (defun dotspacemacs/user-config ()
   "Configuration function for user code.
@@ -323,6 +323,8 @@ you should place your code here."
       (osx-clipboard-mode +1)
       (diminish 'osx-clipboard-mode)))
   (setq org-archive-location "~/Developer/notes/done.org::")
+  (setq org-todo-keywords
+        '((sequence "TODO" "WIP" "DONE")))
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
