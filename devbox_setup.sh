@@ -1,6 +1,6 @@
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew tap caskroom/cask
-brew tap caskroom/fonts
+brew tap homebrew/cask-fonts
+
 brew install \
   git \
   vim \
@@ -16,17 +16,15 @@ brew install \
   zsh-syntax-highlighting \
   fzf \
   lsd \
-  global --with-pygments --with-ctags
+  global \
+  zsh
 
 brew cask install font-source-code-pro \
   font-hack-nerd-font \
-  font
   iterm2    \
   spotify   \
   keepassx  \
-  spectacle \
-
-rbenv install 2.4.0
+  spectacle 
 
 # vim setup
 git clone https://github.com/maxArturo/vimrc.git ~/.vim_runtime
