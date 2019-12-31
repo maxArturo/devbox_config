@@ -1,7 +1,7 @@
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=500000
+SAVEHIST=500000
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
 
@@ -80,5 +80,8 @@ fi
 source "/usr/local/opt/fzf/shell/key-bindings.zsh"
 
 # autojumping (https://github.com/wting/autojump), to uninstall: clone git dir and run ./uninstall.py
-[[ -s /Users/malcalasai001/.autojump/etc/profile.d/autojump.sh ]] && source /Users/malcalasai001/.autojump/etc/profile.d/autojump.sh
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+
+# specific config for whatever co you're on
+[ -f ~/.jobrc ] && source ~/.jobrc
 

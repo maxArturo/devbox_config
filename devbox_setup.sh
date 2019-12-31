@@ -17,6 +17,7 @@ brew install \
   fzf \
   lsd \
   global \
+  jid \
   zsh
 
 brew cask install font-source-code-pro \
