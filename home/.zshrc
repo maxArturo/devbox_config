@@ -39,6 +39,9 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 # Local bin folder
 export PATH="$HOME/bin:$PATH"
 
+# Flutter
+export PATH="$HOME/bin/flutter/bin:$PATH"
+
 # NVM
 export NVM_DIR=~/.nvm
 . $(brew --prefix nvm)/nvm.sh

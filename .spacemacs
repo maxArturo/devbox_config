@@ -31,10 +31,6 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
-     go
-     yaml
-     typescript
-     javascript
      html
      markdown
      ;; ----------------------------------------------------------------
@@ -49,13 +45,13 @@ values."
      git
      gtags
      ;; markdown
-     (org :variables org-enable-github-support t)
+     org
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
      ;; spell-checking
      ;; syntax-checking
-     ;; version-control
+     version-control
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -307,7 +303,7 @@ executes.
  This function is mostly useful for variables that need to be set
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
-)
+  )
 
 (defun dotspacemacs/user-config ()
   "Configuration function for user code.
@@ -316,15 +312,25 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
-  (setq org-log-done 'time)
+
+  ;; osx-clipboard interop
   (use-package osx-clipboard
     :config
     (progn
       (osx-clipboard-mode +1)
       (diminish 'osx-clipboard-mode)))
-  (setq org-archive-location "~/Developer/notes/done.org::")
+
+  ;; additional multistate workflow for org-mode todos
   (setq org-todo-keywords
         '((sequence "TODO" "WIP" "DONE")))
+
+
+  ;; configure archive location for done tasks
+  (setq org-archive-location "~/Developer/notes/done.org::")
+
+  ;; set timestamp for completed tasks
+  (setq org-log-done 'time)
+
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
@@ -334,13 +340,12 @@ you should place your code here."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(evil-want-Y-yank-to-eol nil)
  '(org-agenda-files
    (quote
-    ("~/Developer/notes/todos.org" "~/Developer/notes/snippets.org" "~/Developer/notes/notes.org")))
+    ("~/Developer/notes/notes.org" "~/Developer/notes/todo.org")))
  '(package-selected-packages
    (quote
-    (jenkins go-guru go-eldoc go-mode osx-clipboard smeargle orgit magit-gitflow magit-popup helm-gtags helm-gitignore gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link ggtags evil-magit magit transient git-commit async with-editor dash yaml-mode ox-gfm tide typescript-mode flycheck web-beautify livid-mode skewer-mode simple-httpd json-mode json-snatcher json-reformat js2-refactor yasnippet multiple-cursors js2-mode js-doc coffee-mode web-mode tagedit slim-mode scss-mode sass-mode pug-mode less-css-mode helm-css-scss haml-mode emmet-mode markdown-preview-mode mmm-mode markdown-toc markdown-mode gh-md ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint info+ indent-guide hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation hide-comnt help-fns+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu elisp-slime-nav dumb-jump define-word column-enforce-mode clean-aindent-mode auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line))))
+    (web-mode tagedit slim-mode scss-mode sass-mode pug-mode helm-css-scss haml-mode emmet-mode mmm-mode markdown-toc markdown-mode gh-md osx-clipboard git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter diff-hl smeargle orgit org-projectile org-category-capture org-present org-pomodoro alert log4e gntp org-mime org-download magit-gitflow magit-popup htmlize helm-gitignore gnuplot gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link evil-magit magit transient git-commit with-editor ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline powerline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox spinner org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint indent-guide hydra lv hungry-delete hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation helm-themes helm-swoop helm-projectile projectile pkg-info epl helm-mode-manager helm-make helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido flx fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist highlight evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state smartparens evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-ediff evil-args evil-anzu anzu evil goto-chg undo-tree eval-sexp-fu elisp-slime-nav dumb-jump f dash s diminish define-word column-enforce-mode clean-aindent-mode bind-map bind-key auto-highlight-symbol auto-compile packed aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line helm avy helm-core popup async))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
