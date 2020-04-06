@@ -59,9 +59,13 @@ erldocker() {
   docker run -it --rm erlang
 }
 
-###########################
+##################
 # Misc section
-###########################
+##################
+
+##################
+# * Git commands
+##################
 
 ## shortand git push
 
@@ -75,10 +79,48 @@ gdiff () {
     git difftool $1 -y -x "colordiff -y -W $COLUMNS" | less -R
 }
 
+## clean git log
+
 glog () {
     git log --graph --oneline
 }
 
+## cleans merged branches in remote from local repo
+
+clean_branches () {
+	REMOTES="$@" 
+	if [ -z "$REMOTES" ]
+	then
+		REMOTES=$(git remote)
+	fi
+	REMOTES=$(echo "$REMOTES" | xargs -n1 echo)
+	RBRANCHES=() 
+	while read REMOTE
+	do
+		CURRBRANCHES=($(git ls-remote $REMOTE | awk '{print $2}' | grep 'refs/heads/' | sed 's:refs/heads/::'))
+		RBRANCHES=("${CURRBRANCHES[@]}" "${RBRANCHES[@]}")
+	done < <(echo "$REMOTES" )
+	[[ -n $RBRANCHES ]] || exit
+	LBRANCHES=($(git branch | sed 's:\*::' | awk '{print $1}'))
+	for i in "${LBRANCHES[@]}"
+	do
+		skip=
+		for j in "${RBRANCHES[@]}"
+		do
+			[[ $i == $j ]] && {
+				skip=1
+				echo -e "\033[32m Keeping $i \033[0m"
+				break
+			}
+		done
+		[[ -n $skip ]] || {
+			echo -e "\033[31m $(git branch -D $i) \033[0m"
+		}
+	done
+}
+
+
 ## lsd is an enriched version of ls
 alias ls='lsd'
+
 
