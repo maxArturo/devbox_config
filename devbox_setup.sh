@@ -7,7 +7,7 @@ brew install \
   rbenv \
   ruby-build \
   the_silver_searcher \
-  nvm \
+  Schniz/tap/fnm \ # like NVM but better
   colordiff \
   cmus \
   ncdu \
@@ -25,7 +25,7 @@ brew cask install font-source-code-pro \
   iterm2    \
   spotify   \
   keepassx  \
-  spectacle 
+  spectacle
 
 # vim setup
 git clone https://github.com/maxArturo/vimrc.git ~/.vim_runtime
