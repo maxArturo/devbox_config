@@ -42,9 +42,8 @@ export PATH="$HOME/bin:$PATH"
 # Flutter
 export PATH="$HOME/bin/flutter/bin:$PATH"
 
-# NVM
-export NVM_DIR=~/.nvm
-. $(brew --prefix nvm)/nvm.sh
+# fnm https://github.com/Schniz/fnm
+eval "$(fnm env --multi)"
 
 # Handy aliases
 source ~/.aliases
@@ -63,7 +62,8 @@ export PATH=$PATH:/Library/TeX/texbin
 # source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
 
 # yarn goodies
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+# currently commented out to avoid collisions with fnm
+# export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # add syntax for zsh prompt
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

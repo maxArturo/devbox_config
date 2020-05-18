@@ -21,6 +21,7 @@ brew install \
   zsh
 
 brew cask install font-source-code-pro \
+  font-fira-code \
   font-hack-nerd-font \
   iterm2    \
   spotify   \
