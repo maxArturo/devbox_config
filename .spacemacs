@@ -332,7 +332,6 @@ you should place your code here."
 
   ;; set timestamp for completed tasks
   (setq org-log-done 'time)
-
 )
 
 ;; Do not write anything past this comment. This is where Emacs will

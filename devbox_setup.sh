@@ -20,13 +20,14 @@ brew install \
   jid \
   zsh
 
-brew cask install font-source-code-pro \
+brew install --cask font-source-code-pro \
   font-fira-code \
   font-hack-nerd-font \
   iterm2    \
   spotify   \
   keepassx  \
-  spectacle
+  spectacle \
+  stats
 
 # vim setup
 git clone https://github.com/maxArturo/vimrc.git ~/.vim_runtime

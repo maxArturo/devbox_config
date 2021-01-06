@@ -88,3 +88,4 @@ source "/usr/local/opt/fzf/shell/key-bindings.zsh"
 # specific config for whatever co you're on
 [ -f ~/.jobrc ] && source ~/.jobrc
 
+export PATH="/usr/local/opt/libarchive/bin:$PATH"
