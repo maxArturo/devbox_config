@@ -43,7 +43,7 @@ export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/bin/flutter/bin:$PATH"
 
 # fnm https://github.com/Schniz/fnm
-eval "$(fnm env --multi)"
+eval "$(fnm env)"
 
 # Handy aliases
 source ~/.aliases

@@ -1,4 +1,4 @@
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 brew tap homebrew/cask-fonts
 
 brew install \
@@ -7,7 +7,7 @@ brew install \
   rbenv \
   ruby-build \
   the_silver_searcher \
-  Schniz/tap/fnm \ # like NVM but better
+  fnm \
   colordiff \
   cmus \
   ncdu \
