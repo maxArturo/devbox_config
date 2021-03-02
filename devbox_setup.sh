@@ -38,4 +38,4 @@ ln -s ~/devbox_config/home/.aliases ~/
 ln -s ~/devbox_config/home/.zshrc ~/
 ln -s ~/devbox_config/home/.gitconfig ~/
 ln -s ~/devbox_config/home/.gitignore ~/
-
+ln -s ~/devbox_config/home/.spacemacs ~/
